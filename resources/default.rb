@@ -20,6 +20,7 @@
 actions :install, :remove
 
 attribute :user, :kind_of => String, :default => nil
+attribute :user_command, :kind_of => Array, :default => nil
 attribute :group, :kind_of => String, :default => nil
 attribute :commands, :kind_of => Array, :default => nil
 attribute :host, :kind_of => String, :default => "ALL"

@@ -27,6 +27,12 @@ attribute "authorization/sudo/users",
   :type => "array",
   :default => ""
 
+attribute "authorization/sudo/users_commands",
+  :display_name => "Sudo Users Commands",
+  :description => "Commands that are explicitly define for users",
+  :type => "hash",
+  :default => ""
+
 attribute "authorization/sudo/groups",
   :display_name => "Sudo Groups",
   :description => "Groups who are allowed sudo ALL",

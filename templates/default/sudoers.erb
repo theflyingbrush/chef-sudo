@@ -12,8 +12,10 @@ root          ALL=(ALL) ALL
 <%= '#includedir /etc/sudoers.d' if @include_sudoers_d  -%>
 
 <% @sudoers_users.each do |user| -%>
-<%= user %>   ALL=(ALL) <%= "NOPASSWD:" if @passwordless %>ALL
+  <%= user %>   ALL=(ALL) <%= "NOPASSWD:" if @passwordless %> <%= @sudoers_users_commands[user].join(',')  %>
 <% end -%>
+
+#neo ALL=NOPASSWD: /etc/init.d/neo-live restart
 
 # Members of the sysadmin group may gain root privileges
 %sysadmin     ALL=(ALL) <%= "NOPASSWD:" if @passwordless %>ALL

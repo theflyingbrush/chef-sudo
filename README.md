@@ -59,6 +59,12 @@ In JSON (role.json or on the node object):
           "jerry",
           "greg"
         ],
+        "users_commands": {
+          "jerry ": [
+            "somerandomcommand",
+            "anothercommand"
+          ]
+        }   
         "passwordless": true
       }
     }
